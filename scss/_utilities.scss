@@ -1,0 +1,85 @@
+// Text Styles
+.x-large {
+  font-size: 4.2rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+.large {
+  font-size: 3rem;
+  line-height: 0.6;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.medium {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.regular {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.regular-italic {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.light {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+.light-italic {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+  transition: all 0.2s ease-in;
+  z-index: 6;
+
+  &.btn-primary {
+    background: linear-gradient(to left, $blue-light, $blue-dark);
+    color: $primary-light;
+
+    &:hover {
+      background: $cressida-orange;
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Backgrounds
+.bg {
+  &-dark {
+    @include set-background($primary-dark);
+  }
+  &-light {
+    @include set-background($primary-light);
+  }
+  &-accent {
+    @include set-background($blue-dark);
+  }
+}
+
+// Dark overlay gradient
+.dark-overlay {
+  background: linear-gradient(rgba($primary-dark, 1), rgba($primary-dark, 0));
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 75px;
+  z-index: 4;
+}

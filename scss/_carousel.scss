@@ -1,0 +1,68 @@
+// Testimonial Carousel styling
+
+.testimonial-hex {
+  width: 25vw;
+  height: 25vh;
+}
+
+.swiper-button-next,
+.swiper-button-previous {
+  color: $primary-light;
+}
+
+// SVGs
+.hex {
+  fill: none;
+  stroke: $primary-light;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+
+// .testimonial-carousel {
+//   position: relative;
+//   // overflow: hidden;
+//   height: 50vh;
+// }
+
+// .testimonial {
+//   position: absolute;
+//   top: 0;
+//   left: 50%;
+//   transform: translate(-50%, 0);
+//   opacity: 0;
+//   transition: opacity 0.4s ease-in-out;
+// }
+
+// .testimonial.current {
+//   opacity: 1;
+// }
+
+// // SVGs
+// .hex {
+//   fill: none;
+//   stroke: $primary-light;
+//   stroke-width: 5;
+//   stroke-miterlimit: 10;
+// }
+
+// // Responsivity
+// @media (max-width: 500px) {
+//   .testimonial .content {
+//     width: 100%;
+//   }
+// }
+
+// .testimonial-pagination {
+//   position: absolute;
+//   bottom: 0;
+//   left: 50%;
+//   transform: translate(-50%, 0);
+
+//   .hex-page {
+//     .current {
+//       .hex-symbol {
+//         fill: $primary-light;
+//       }
+//     }
+//   }
+// }

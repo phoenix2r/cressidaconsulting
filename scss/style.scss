@@ -1,0 +1,251 @@
+@import 'config';
+@import 'utilities';
+// @import 'carousel';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'aktiv-grotesk', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: $primary-dark;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-dark;
+}
+
+ul {
+  list-style: none;
+}
+
+// img {
+//   width: 100%;
+// }
+
+// Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5rem;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+
+  .logo {
+    width: 25%;
+  }
+
+  img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  .menu {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a {
+    color: $primary-light;
+    font-family: 'aktiv-grotesk-extended', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+
+    &:hover {
+      color: $cressida-orange;
+    }
+  }
+}
+
+// Container for whole page to allow scroll blending
+.page-scroll-content {
+  position: relative;
+}
+
+// Fixed brand decals
+.brand-decals {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+  z-index: 5;
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      height: 25vh;
+      width: auto;
+    }
+  }
+}
+
+// Landing hero image
+.landing {
+  background: url(../imgs/heroimg.jpg) no-repeat center center/cover;
+  height: 100vh;
+
+  &-content {
+    width: 75%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 6;
+
+    h1 {
+      color: $primary-light;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    p {
+      color: $primary-light;
+      padding: 0 10rem 2rem 10rem;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .btn {
+      z-index: 6;
+    }
+  }
+}
+
+// Services
+.solutions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 7rem 0;
+
+  h2 {
+    color: $cressida-orange;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    color: $blue-dark;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .services {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    z-index: 6;
+  }
+
+  .service-card {
+    border: 5px solid $blue-dark;
+    background: #fff6e4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 1rem;
+
+    p.subtitle {
+      font-size: 1rem;
+      max-width: 350px;
+    }
+
+    ul {
+      list-style: square;
+      padding: 1.5rem;
+      max-width: 350px;
+      $colors: $cressida-orange, $blue-light, $blue-dark, $primary-dark;
+
+      li {
+        @include color-cycle($colors);
+
+        span {
+          color: $primary-dark;
+        }
+      }
+    }
+  }
+}
+
+// About
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 7rem 7rem;
+  background: url(../imgs/aboutimg.jpg) no-repeat center center/cover;
+  // Photo by <a href="https://unsplash.com/@smudgern6?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniel Smyth</a> on <a href="/s/photos/precision?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+  &-text {
+    width: 50%;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-img {
+    width: 40%;
+    height: auto;
+    margin: 0 2rem;
+  }
+}
+
+// Candidates
+.candidates {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 7rem;
+
+  .call-to-action {
+    width: 40%;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .buttons {
+      margin-top: 1.5rem;
+    }
+  }
+}

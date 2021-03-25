@@ -1,0 +1,30 @@
+// Colors
+$primary-dark: #49111C;
+$primary-light: #FFEDC3;
+$blue-light: #00AFB5;
+$blue-dark: #004777;
+$cressida-orange: #FF7700;
+
+// set text color based on the background
+@function set-text-color($color) {
+  @if(lightness($color) > 50) {
+    @return $primary-dark;
+  } @else {
+    @return $primary-light;
+  }
+}
+
+// Set background and text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+// color repeating list elements with a cycle of colors
+@mixin color-cycle($color-set) {
+  @for $i from 1 through length($color-set) {
+    &:nth-child(#{length($color-set)}n+#{$i}) {
+      color: nth($color-set, $i);
+    }
+  }
+}
